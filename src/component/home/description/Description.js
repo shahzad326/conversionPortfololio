@@ -22,7 +22,7 @@ const Description = () => {
       </div>
       <div className="flex">
         <img src={ipadpro1} alt="" className="w-96 h-96" />
-        <span className="flex align-center items-center">
+        <span className="flex align-center items-center text-4xl font-semibold">
           {" "}
           We're a team of 200+ Product Managers, Designers and Developers.
           And... we are one of the highest rated Blockchain agencies in the

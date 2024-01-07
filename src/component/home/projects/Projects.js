@@ -7,7 +7,7 @@ import Darabase20230920T161227172Z002058 from "../../../images/Darabase20230920T
 
 const ProjectContainer = ({ title, image, description, heading }) => {
   return (
-    <div className="max-w-md mx-4 my-12 p-4 bg-white rounded-md shadow-lg">
+    <div className="max-w-md mx-4 my-12 p-4 bg-white rounded-md shadow-lg border border-gray-200">
       <img
         src={image}
         alt={title}

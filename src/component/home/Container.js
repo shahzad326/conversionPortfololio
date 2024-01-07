@@ -8,7 +8,6 @@ import Screen2 from "./screen/Screen2";
 import Screen3 from "./screen/Screen3";
 import Screen from "./screen/Screen";
 import Description from "./description/Description";
-import Footer from "../footer/Footer";
 
 const Container = () => {
   return (
@@ -21,7 +20,6 @@ const Container = () => {
       <Screen2 />
       <Screen3 />
       <Projects />
-      <Footer />
     </div>
   );
 };

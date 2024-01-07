@@ -1,15 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [showIcon, setShowIcon] = useState(true);
+  const [isSticky, setIsSticky] = useState(true);
 
   const toggleIcon = () => {
     setShowIcon((prevShowIcon) => !prevShowIcon);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      <div className="flex bg-gray-800 p-4 ">
+      <div
+        className={`fixed flex w-full p-4 z-50 ${
+          isSticky ? "bg-opacity-80 bg-gray-700 backdrop-blur-md" : ""
+        } transition-all ease-in-out duration-300`}
+      >
         {/* Left side - Logo */}
         <div className="flex-shrink-0 ml-12">
           <svg
@@ -63,10 +85,11 @@ const Navbar = () => {
             <li className="hover:text-blue-500 text-md font-semibold">About</li>
             <li className="hover:text-blue-500 text-md font-semibold">Blog</li>
           </ul>
-
-          <button className="bg-white text-black px-5 py-3 rounded ml-4 font-semibold">
-            Get Started
-          </button>
+          <Link to="/contactUs">
+            <button className="bg-white text-black px-5 py-3 rounded ml-4 font-semibold">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </div>

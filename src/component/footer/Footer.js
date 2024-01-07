@@ -6,13 +6,18 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-8">
       <div className="container mx-auto flex justify-between">
-        <div className="w-1/3">
-          <h4 className="text-lg font-bold mb-2">Address</h4>
-          <p>86-90 Paul Street</p>
-          <p>London, EC2A 4NE</p>
-          <h4 className="text-lg font-bold mt-4 mb-2">Contact</h4>
-          <p>contact@techalchemy.co</p>
-          <p>+44 7521 507783</p>
+        <div className="w-auto flex  ml-12">
+          <div>
+            <h4 className="text-lg font-bold mb-2">Address</h4>
+            <p>86-90 Paul Street</p>
+            <p>London, EC2A 4NE</p>
+          </div>
+          <div className="ml-12">
+            {" "}
+            <h4 className="text-lg font-bold  mb-2">Contact</h4>
+            <p>contact@techalchemy.co</p>
+            <p>+44 7521 507783</p>
+          </div>
         </div>
         <div className="w-1/3 flex justify-center">
           <a href="/about" className="mx-4 hover:text-gray-400">
